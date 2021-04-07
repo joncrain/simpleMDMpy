@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## Unreleased
+### Issues
+- Closes #25
+
+### Changed
+- Replaced `id_override` input parameters with `starting_after` and `limit` in get_logs()
+- get_logs() now passes `params` instead of `data` and removed `id_override`
+- Replaced `base_url` with local `_params` in _get_data()
+
 ## v3.0.5
 
 ### Issues
