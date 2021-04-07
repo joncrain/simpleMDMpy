@@ -11,8 +11,12 @@ class Logs(SimpleMDMpy.SimpleMDM.Connection):
         SimpleMDMpy.SimpleMDM.Connection.__init__(self, api_key)
         self.url = self._url("/logs")
 
-    def get_logs(self, id_override=0):
+    def get_logs(self, starting_after=None, limit=None):
         """And I mean all the LOGS"""
         url = self.url
-        data = {}
-        return self._get_data(url, data, id_override=id_override)
+        params = {}
+        if starting_after:
+            params['starting_after'] = starting_after
+        if limit:
+            params['limit'] = limit
+        return self._get_data(url, params)
