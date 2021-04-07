@@ -6,7 +6,6 @@
 from builtins import str
 from builtins import range
 from builtins import object
-import json
 import requests
 
 class ApiError(Exception):
@@ -29,10 +28,14 @@ class Connection(object): #pylint: disable=old-style-class,too-few-public-method
         start_id = 0
         has_more = True
         resp_data = []
-        base_url = url
+        _params = {
+            'limit':100,
+            'starting_after':None
+        }
+        if params:
+            _params.update(params)
         while has_more:
-            url = base_url + "?limit=100&starting_after=" + str(start_id)
-            resp = requests.get(url, params, auth=(self.api_key, ""), proxies=self.proxyDict)
+            resp = requests.get(url, _params, auth=(self.api_key, ""), proxies=self.proxyDict)
             if not 200 <= resp.status_code <= 207:
                 raise ApiError(f"API returned status code {resp.status_code}")
             resp_json = resp.json()
@@ -41,6 +44,7 @@ class Connection(object): #pylint: disable=old-style-class,too-few-public-method
             has_more = resp_json.get('has_more', None)
             if has_more:
                 start_id = data[-1].get('id')
+                _params['starting_after'] = start_id
         return resp_data
 
     def _patch_data(self, url, data, files=None):
