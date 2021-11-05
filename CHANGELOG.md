@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [Unreleased]
+### Changes
+- Closes issue #26
+- Fixes calls that return a single item
+
 ## v3.0.6
 
 ### PRs Included
