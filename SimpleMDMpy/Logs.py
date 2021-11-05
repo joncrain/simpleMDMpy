@@ -11,9 +11,19 @@ class Logs(SimpleMDMpy.SimpleMDM.Connection):
         SimpleMDMpy.SimpleMDM.Connection.__init__(self, api_key)
         self.url = self._url("/logs")
     
-    # FIXME: when setting limit, there may be an indefinite loop
     def get_logs(self, starting_after=None, limit=None):
-        """And I mean all the LOGS"""
+        """Returns logs, and I mean all the LOGS
+        
+        Args:
+            starting_after (str, optional):  set to the id of the log object you
+                want to start with. Defaults to the first object.
+            limit (str, optional): A limit on the number of objects that will be
+                returned per API call. Setting this will still return all logs.
+                Defaults to 100.
+        
+        Returns:
+            array: An array of dictionary log objects.
+        """
         url = self.url
         params = {}
         if starting_after:
