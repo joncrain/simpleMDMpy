@@ -4,7 +4,7 @@ A python library for simpleMDM API.
 
 [SimpleMDM API Documentation](https://simplemdm.com/docs/api)
 
-## Contributing 
+## Contributing
 
 - [Contributing.md](./CONTRIBUTING.md)
 

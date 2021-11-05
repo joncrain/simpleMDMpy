@@ -9,6 +9,18 @@
 - get_logs() now passes `params` instead of `data` and removed `id_override`
 - Replaced `base_url` with local `_params` in _get_data()
 
+## v3.0.6
+
+### PRs Included
+
+- [#35](https://github.com/macadmins/simpleMDMpy/pull/25)
+- [#34](https://github.com/macadmins/simpleMDMpy/pull/34)
+- [#27](https://github.com/macadmins/simpleMDMpy/pull/27)
+
+### Changes
+
+- Add method to get all custom attributes for a device
+
 ## v3.0.5
 
 ### Issues
