@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Ability to update the actual device name
+
 ### Changes
 
 - Replaced `id_override` input parameters with `starting_after` and `limit` in get_logs()
@@ -12,6 +16,8 @@
 
 - Closes issue #25
 - Closes issue #26
+- Closes issue #24
+- Closes issue #38
 
 ## [v3.0.6]
 

@@ -29,10 +29,16 @@ class Devices(SimpleMDMpy.SimpleMDM.Connection):
         data = {'name': name, 'group_id': group_id}
         return self._post_data(self.url, data)
 
-    def update_device(self, name, device_id):
-        """Update the SimpleMDM name or device name of a device object."""
+    def update_device(self, device_id, name=None, device_name=None):
+        """Update the SimpleMDM name and/or device name of a device object."""
         url = self.url + "/" + str(device_id)
-        data = {'name': name}
+        data = {}
+        if name is not None:
+            data.update({'name':name})
+        if device_name is not None:
+            data.update({'device_name':device_name})
+        if data == {}:
+            raise Exception(f"Missing name and/or device_name variables.")
         return self._patch_data(url, data)
 
     def delete_device(self, device_id):
