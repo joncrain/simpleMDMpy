@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## v3.0.7
+
+### Changes
+
+- Add method to download profiles
+
+### Issues
+
+- Closes #40
+
 ## v3.0.6
 
 ### PRs Included
