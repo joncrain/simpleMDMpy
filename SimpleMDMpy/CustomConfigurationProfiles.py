@@ -49,6 +49,11 @@ class CustomConfigurationProfiles(SimpleMDMpy.SimpleMDM.Connection):
         url = self.url + "/" + profile_id
         return self._delete_data(url)
 
+    def download_profile(self, profile_id):
+        """downloads custom profile"""
+        url = self.url + "/" + profile_id + "/download/"
+        return self._get_xml(url)
+
     def assign_to_device_group(self, profile_id, device_group_id):
         """assigns custom profile to group"""
         url = self.url + "/" + profile_id + "/device_groups/" + device_group_id

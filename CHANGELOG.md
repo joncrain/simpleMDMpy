@@ -7,6 +7,7 @@
 - Added ability to update the actual device name via SimpleMDM (#24, #38)
 - Replaced get_logs() `id_override` input parameter with `starting_after` and `limit` (#25)
 - Fixes calls that return a single item (#26)
+- Add method to download profiles (#40)
 
 ### Issues
 
@@ -14,6 +15,7 @@
 - Closes issue #38
 - Closes issue #25
 - Closes issue #26
+- Closes issue #40
 
 ## [v3.0.6]
 

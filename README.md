@@ -179,7 +179,6 @@ class CustomAttributes(SimpleMDMpy.SimpleMDM.Connection)
 <!-- TODO: Custom Configuration -->
 
 ### Custom Configuration Profiles
-<!-- TODO: DOWNLOAD PROFILE -->
 ```python
 class CustomConfigurationProfiles(SimpleMDMpy.SimpleMDM.Connection)
  |  work with custom profiles
@@ -196,6 +195,9 @@ class CustomConfigurationProfiles(SimpleMDMpy.SimpleMDM.Connection)
  |
  |  delete_profile(self, profile_id)
  |      deletes custom profile
+ |
+ |  download_profile(self, profile_id)
+ |      downloads custom profile
  |
  |  get_profiles(self)
  |      returns profiles
