@@ -374,7 +374,7 @@ class Logs(SimpleMDMpy.SimpleMDM.Connection)
  |
  |  __init__(self, api_key)
  |
- |  get_logs(self)
+ |  get_logs(self, starting_after=None, limit=None)
  |      And I mean all the LOGS, before pagination
  |
 
