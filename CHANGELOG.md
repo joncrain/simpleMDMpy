@@ -1,16 +1,23 @@
 # CHANGELOG
 
-## v3.0.7
+## [Unreleased]
 
 ### Changes
 
-- Add method to download profiles
+- Added ability to update the actual device name via SimpleMDM (#24, #38)
+- Replaced get_logs() `id_override` input parameter with `starting_after` and `limit` (#25)
+- Fixes calls that return a single item (#26)
+- Add method to download profiles (#40)
 
 ### Issues
 
-- Closes #40
+- Closes issue #24
+- Closes issue #38
+- Closes issue #25
+- Closes issue #26
+- Closes issue #40
 
-## v3.0.6
+## [v3.0.6]
 
 ### PRs Included
 
@@ -22,7 +29,7 @@
 
 - Add method to get all custom attributes for a device
 
-## v3.0.5
+## [v3.0.5]
 
 ### Issues
 
@@ -32,7 +39,7 @@
 
 - CODEOWNERS
 
-## v3.0.4
+## [v3.0.4]
 
 ### Issues
 
@@ -49,7 +56,7 @@
 - Merged with @MagerValp / simpleMDMpy @ [508540928](https://github.com/MagerValp/simpleMDMpy/commit/50854094bee2ac5306eded7c5614d76f3eab4c25)
 - minor tweaks on the readme
 
-## v3.0.3
+## [v3.0.3]
 
 ### Issues
 
@@ -67,7 +74,7 @@
 - default branch is now `main`
 - remove `data` payload from Devices.delete_device
 
-## v3.0.2
+## [v3.0.2]
 
 ### Issues
 
@@ -83,7 +90,7 @@
 
 - Changed paginaition to work without compounding to a `414`
 
-## v3.0.1
+## [v3.0.1]
 
 ### Issues
 
@@ -94,7 +101,7 @@
 - Changed paginaition to work, now returns obj not response
 - good catch @bryanheinz
 
-## v3.0.0
+## [v3.0.0]
 
 - Closes #3
 
@@ -103,7 +110,7 @@
 - removed forced encoding for `GET` responses
 - added some pylint comments
 
-## v2.1.0
+## [v2.1.0]
 
 ### Issues
 
@@ -113,7 +120,7 @@
 
 - fixed module names
 
-## v2.0.0
+## [v2.0.0]
 
 ### Issues
 
