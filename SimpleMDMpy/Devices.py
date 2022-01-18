@@ -15,14 +15,13 @@ class Devices(SimpleMDMpy.SimpleMDM.Connection):
         """Returns a device specified by id. If no ID or search is
         specified all devices will be returned"""
         url = self.url
-        data = None
+        data = {}
         if search:
-            if include_awaiting_enrollment:
-                data = {'search': search, 'include_awaiting_enrollment': include_awaiting_enrollment}
-            else:
-                data = {'search': search}
+            data = {'search': search}
         elif device_id != 'all':
             url = url + "/" + str(device_id)
+        if include_awaiting_enrollment:
+            data.update({'include_awaiting_enrollment': include_awaiting_enrollment})
         return self._get_data(url, data)
 
     def create_device(self, name, group_id):
