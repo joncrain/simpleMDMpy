@@ -11,13 +11,16 @@ class Devices(SimpleMDMpy.SimpleMDM.Connection):
         SimpleMDMpy.SimpleMDM.Connection.__init__(self, api_key)
         self.url = self._url("/devices")
 
-    def get_device(self, device_id="all", search=None):
+    def get_device(self, device_id="all", search=None, include_awaiting_enrollment=False):
         """Returns a device specified by id. If no ID or search is
         specified all devices will be returned"""
         url = self.url
         data = None
         if search:
-            data = {'search': search}
+            if include_awaiting_enrollment:
+                data = {'search': search, 'include_awaiting_enrollment': include_awaiting_enrollment}
+            else:
+                data = {'search': search}
         elif device_id != 'all':
             url = url + "/" + str(device_id)
         return self._get_data(url, data)
