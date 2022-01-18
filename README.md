@@ -291,7 +291,7 @@ class Devices(SimpleMDMpy.SimpleMDM.Connection)
  |  shutdown_device(self, device_id)
  |      This command sends a shutdown command to the device.
  |
- |  update_device(self, name, device_id)
+ |  update_device(self, device_id, name=None, device_name=None)
  |      Update the SimpleMDM name or device name of a device object.
  |
  |  update_os(self, device_id)
@@ -377,7 +377,7 @@ class Logs(SimpleMDMpy.SimpleMDM.Connection)
  |
  |  __init__(self, api_key)
  |
- |  get_logs(self)
+ |  get_logs(self, starting_after=None, limit=None)
  |      And I mean all the LOGS, before pagination
  |
 
