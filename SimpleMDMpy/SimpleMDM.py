@@ -43,11 +43,6 @@ class Connection(object): #pylint: disable=old-style-class,too-few-public-method
                 start_id = data[-1].get('id')
         return resp_data
 
-    def _get_xml(self, url, params=None):
-        """GET call to SimpleMDM API"""
-        resp = requests.get(url, params, auth=(self.api_key, ""), proxies=self.proxyDict)
-        return resp.content
-
     def _patch_data(self, url, data, files=None):
         """PATCH call to SimpleMDM API"""
         resp = requests.patch(url, data, auth=(self.api_key, ""), \
