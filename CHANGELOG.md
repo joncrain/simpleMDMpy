@@ -1,7 +1,5 @@
 # CHANGELOG
 
-## v3.0.7
-=======
 ## [Unreleased]
 
 ### Changes
