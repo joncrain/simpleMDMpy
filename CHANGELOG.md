@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## v3.0.8
+
+### Changes
+
+- Adds option for get_devices for include_awaiting_enrollment
+
+### Issues
+
+- Closes #43
+
 ## v3.0.7
 
 ### Changes
