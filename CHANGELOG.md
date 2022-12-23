@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [3.0.7]
+
 ### Added
 - setup.cfg - Python package setup file ([#29](https://github.com/macadmins/simpleMDMpy/issues/29)) - TY [@bryanheinz](https://github.com/bryanheinz)
 - pyproject.toml - Python package meta setup file ([#29](https://github.com/macadmins/simpleMDMpy/issues/29)) - TY [@bryanheinz](https://github.com/bryanheinz)
