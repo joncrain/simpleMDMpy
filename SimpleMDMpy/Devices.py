@@ -30,7 +30,9 @@ class Devices(SimpleMDMpy.SimpleMDM.Connection):
             array: An array of dictionary objects with device information.
         """
         url = self.url
-        params = {'include_awaiting_enrollment': include_awaiting_enrollment}
+        params = {}
+        if include_awaiting_enrollment:
+            params['include_awaiting_enrollment'] = True
         # if a device ID is specified, then ignore any searches
         if device_id != 'all':
             url = url + "/" + str(device_id)
